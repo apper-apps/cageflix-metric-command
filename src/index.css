@@ -1,0 +1,94 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.Toastify__toast-container {
+  font-size: 14px;
+}
+
+.Toastify__toast {
+  background: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.Toastify__toast--success {
+  border-left: 4px solid #4CAF50;
+}
+
+.Toastify__toast--error {
+  border-left: 4px solid #EF5350;
+}
+
+.Toastify__toast--warning {
+  border-left: 4px solid #FFA726;
+}
+
+.Toastify__toast--info {
+  border-left: 4px solid #FFD700;
+}
+
+.Toastify__progress-bar {
+  background: #FFD700;
+}
+
+.Toastify__close-button {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD700;
+}
+
+/* Shimmer effect for loading */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    #2d2d2d 20%,
+    #1a1a1a 40%,
+    #1a1a1a 100%
+  );
+  background-size: 468px 100%;
+}
